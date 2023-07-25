@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'SUITE-Regular';
+  background: #E1DDDA;
+}
+
+.container {
+  max-width: 600px;
+  margin: 10rem auto 0;
+  padding: 50px 0;
+  background: #DAD2CB;
+}
+
+.searchBox {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#search {
+  width: 300px;
+  height: 40px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  background: NONE;
+  color: #000;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #000;
+  font-family: 'SUITE-Regular';
+}
+
+.listBox {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+}
+
+.listInner {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+  transition: all 0.4s ease-in-out;
+  font-size: 1.1rem;
+}
+
+.country {
+  font-weight: bold;
+  margin-right: 10px;
+}

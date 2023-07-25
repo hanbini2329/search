@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="searchBox">
+      <h1>SEARCH</h1>
+      <input type="text" id="search" onkeyup="filter()" placeholder="나라, 수도를 검색해보세요." />
+    </div>
+    <div class="listBox">
+      <div class="listInner">
+        <span class="country">America</span>
+        <span class="city">Washington</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Austria</span>
+        <span class="city">Vienna</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Australia</span>
+        <span class="city">Canberra</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Brazil</span>
+        <span class="city">Brasilia</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Belgium</span>
+        <span class="city">Brussels</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Canada</span>
+        <span class="city">Ottawa</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Chile</span>
+        <span class="city">Santiago</span>
+      </div>
+      <div class="listInner">
+        <span class="country">China</span>
+        <span class="city">Beijing</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Cuba</span>
+        <span class="city">Havana</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Czechia</span>
+        <span class="city">Prague</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Denmark</span>
+        <span class="city">Copenhagen</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Ecuador</span>
+        <span class="city">Quito</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Egypt</span>
+        <span class="city">Cairo</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Finland</span>
+        <span class="city">Helsinki</span>
+      </div>
+      <div class="listInner">
+        <span class="country">France</span>
+        <span class="city">Paris</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Germany</span>
+        <span class="city">Berlin</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Greece</span>
+        <span class="city">Athens</span>
+      </div>
+      <div class="listInner">
+        <span class="country">India</span>
+        <span class="city"> New Delhi</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Israel</span>
+        <span class="city">Jerusalem</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Italy</span>
+        <span class="city">Rome</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Japan</span>
+        <span class="city"> Tokyo</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Korea</span>
+        <span class="city"> Seoul</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Mexico</span>
+        <span class="city">Mexico city</span>
+      </div>
+      <div class="listInner">
+        <span class="country">New Zealand</span>
+        <span class="city">Wellington</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Norway</span>
+        <span class="city"> Oslo</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Peru</span>
+        <span class="city"> Lima</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Russia</span>
+        <span class="city"> Moscow </span>
+      </div>
+      <div class="listInner">
+        <span class="country">Taiwan</span>
+        <span class="city"> Taipei</span>
+      </div>
+      <div class="listInner">
+        <span class="country">Turkey</span>
+        <span class="city"> Ankara</span>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function filter() {
+      let search = document.getElementById('search').value.toLowerCase();
+      //toLowerCase()소문자 바꾸라는것
+      let listInner = document.getElementsByClassName('listInner');
+
+      for (i = 0; i < listInner.length; i++) {
+        city = listInner[i].getElementsByClassName('city');
+        country = listInner[i].getElementsByClassName('country');
+        if (city[0].innerHTML.toLowerCase().includes(search) ||
+          country[0].innerHTML.toLowerCase().includes(search)
+        ) {
+          listInner[i].style.display = 'flex';
+        } else {
+          listInner[i].style.display = 'none';
+        }
+      }
+
+    }
+  </script>
+</body>
+
+</html>
